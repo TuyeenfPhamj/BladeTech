@@ -1,1 +1,17 @@
-@import  '../../../index.scss';
+// watch change: sass --watch src/asset/css/main.scss:src/asset/css/main.css
+
+//reset
+@use './base/reset' as *;
+
+//abstracts
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+
+// grid system
+@use './base/grid-system.scss' as *;
+
+//Component
+@use '../../../component/Header/Header.scss' as *;
+
+// pages
+@use  '../../../index.scss' as *;

@@ -1,0 +1,216 @@
+@use '../../src/asset/css/abstracts/variables' as *;
+
+.header_container{
+    width: 100%;
+    height: 39px;
+    .top_header_container{
+        background-color: $primary-color;
+        width: 100%;
+
+        .top_header_left{
+            display: flex;
+
+            img{
+                width: 25px;
+                margin-top: 5px;
+            }
+
+            button{
+                border-radius: 20px;
+                color: $primary-color;
+                padding: 0px 10px;
+                background-color: white;
+                position: relative;
+                margin: 5px 0px;
+            }
+        }
+        .top_header_middle{
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            img{
+                width: 27px;
+                height:max-content;
+            }
+            top: 5px;
+
+            p{
+                font-weight: bold;
+                margin-right: 10px;
+                margin-left: 6px;
+                color: white;
+            }
+            font-size: 16px;
+            .account_dropdown{
+                display: none;
+                position: absolute;
+                top: 100%;
+                background: white;
+                border: 1px solid #ccc;
+                padding: 10px;
+                z-index: 100;
+                width: 98vw;
+
+                h3{
+                    text-align: center;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                    color: $primary-color;
+                }
+                .email_field,.password_field{
+                    display: flex;
+                    label{
+                        flex: 1;
+                    }
+                }
+                label{
+                    font-size: 17px;
+                }
+                
+                input[type="text"],input[type="password"]{
+                    width: 70%;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    margin-right: 10px;
+                }
+                .button_container{
+                    margin-top: 5px;
+                    text-align: center;
+                    button{
+                        padding: 5px 0px;
+                        width: 90%;
+                        background-color: $primary-color;
+                        border-radius: 10px;
+                        color: white;
+                    }
+                    
+                }
+                .control{
+                    text-align: center;
+                    a{
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: $primary-color-hover;
+                    }
+                    p{
+                        color: black;
+                        font-weight: normal;
+                    }
+                }
+
+
+            }
+
+        }
+        .top_header_middle.show .account_dropdown {
+            display: block;
+        }
+        @media (hover: hover) {
+            .top_header_middle:hover .account_dropdown {
+                display: block;
+            }
+        }
+
+        .top_header_right{
+            .contact_container{
+                img{
+                    width: 27px;
+                    margin-top: 5px;
+                }
+                p{
+                    line-height: 1;
+                    color: white;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+    }
+
+    .bottom_header_container{
+        background-color: $secondary-color;
+        width: 100%;
+        height: 35px;
+
+        .bottom_header{
+            img{
+                width: 100%;
+                max-width: 25px;
+                min-width: 25px;
+                position: relative;
+                top: 2px;
+                left: 7%;
+            }
+            
+            .logo_container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    height: 35px;
+                }
+                img{
+                    min-width: 20px;
+                    max-width: 45px;
+                    max-height: 35px;
+                }
+            }
+            .search_bar_container{
+                display: flex;
+                    align-items: center;
+                .search_bar_control{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    input[type="text"]{
+                    width: 95%;
+                    margin-right: -5px;
+                    margin-left: 5px;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 25px;
+                    background-color: white;
+                    }
+                    img{
+                        left: -3px;
+                    }
+                    button{
+                        background-color: white;
+                        height: 29px;
+                        border: none;
+                        border-bottom-right-radius: 5px;
+                        border-top-right-radius: 5px;
+                    }   
+                }          
+            }
+        }
+    }
+
+
+}
+
+
+
+
+//Màn hình điện thoại siêu bé
+// @media (max-width: 320px){
+//     .top_header_left button{
+//         font-size: 9px;
+//     }
+    
+// }
+
+@media (max-width: 450px){
+    
+}
+
+//Màn hình điện thoại
+@media (min-width: 321px) and (max-width: 739px){
+    .top_header_left button{
+        font-size: 11px;
+    }
+}
+
