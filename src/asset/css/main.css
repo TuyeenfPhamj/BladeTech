@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "SF Pro Display", "Inter", "Segoe UI", sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
@@ -543,6 +543,11 @@ body {
   background-color: #4B8CFF;
   width: 100%;
 }
+@media (min-width: 740px) {
+  .header_container .top_header_container {
+    position: relative;
+  }
+}
 .header_container .top_header_container .top_header_left {
   display: flex;
 }
@@ -575,6 +580,12 @@ body {
   margin-left: 6px;
   color: white;
 }
+@media (min-width: 740px) {
+  .header_container .top_header_container .top_header_middle {
+    position: static;
+    margin-top: 5px;
+  }
+}
 .header_container .top_header_container .top_header_middle .account_dropdown {
   display: none;
   position: absolute;
@@ -584,6 +595,14 @@ body {
   padding: 10px;
   z-index: 100;
   width: 98vw;
+  max-width: 500px;
+}
+@media (min-width: 740px) {
+  .header_container .top_header_container .top_header_middle .account_dropdown {
+    max-width: 500px;
+    right: 0%;
+    top: 110%;
+  }
 }
 .header_container .top_header_container .top_header_middle .account_dropdown h3 {
   text-align: center;
@@ -650,12 +669,12 @@ body {
 }
 .header_container .bottom_header_container {
   background-color: #29324E;
-  width: 100%;
+  width: 100vw;
   height: 35px;
 }
 .header_container .bottom_header_container .bottom_header img {
   width: 100%;
-  max-width: 25px;
+  max-width: 30px;
   min-width: 25px;
   position: relative;
   top: 2px;
@@ -675,8 +694,8 @@ body {
   max-height: 35px;
 }
 .header_container .bottom_header_container .bottom_header .search_bar_container {
-  display: flex;
   align-items: center;
+  margin-top: 3px;
 }
 .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control {
   width: 100%;

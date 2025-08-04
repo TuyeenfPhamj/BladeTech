@@ -6,6 +6,9 @@
     .top_header_container{
         background-color: $primary-color;
         width: 100%;
+        @media (min-width: 740px){
+            position: relative;
+        }
 
         .top_header_left{
             display: flex;
@@ -28,17 +31,23 @@
             position: relative;
             display: flex;
             justify-content: flex-end;
+            top: 5px;
             img{
                 width: 27px;
                 height:max-content;
             }
-            top: 5px;
+            
 
             p{
                 font-weight: bold;
                 margin-right: 10px;
                 margin-left: 6px;
                 color: white;
+            }
+
+            @media (min-width: 740px){
+                position: static;
+                margin-top: 5px;
             }
             font-size: 16px;
             .account_dropdown{
@@ -50,6 +59,13 @@
                 padding: 10px;
                 z-index: 100;
                 width: 98vw;
+                max-width: 500px;
+
+                @media (min-width: 740px){
+                    max-width: 500px;
+                    right: 0%;
+                    top: 110%;
+                }
 
                 h3{
                     text-align: center;
@@ -99,7 +115,7 @@
                         font-weight: normal;
                     }
                 }
-
+                
 
             }
 
@@ -131,13 +147,12 @@
 
     .bottom_header_container{
         background-color: $secondary-color;
-        width: 100%;
+        width: 100vw;
         height: 35px;
-
         .bottom_header{
             img{
                 width: 100%;
-                max-width: 25px;
+                max-width: 30px;
                 min-width: 25px;
                 position: relative;
                 top: 2px;
@@ -158,21 +173,21 @@
                 }
             }
             .search_bar_container{
-                display: flex;
-                    align-items: center;
+                align-items: center;
+                margin-top: 3px;
                 .search_bar_control{
                     width: 100%;
                     display: flex;
                     align-items: center;
 
                     input[type="text"]{
-                    width: 95%;
-                    margin-right: -5px;
-                    margin-left: 5px;
-                    border: none;
-                    border-radius: 3px;
-                    font-size: 25px;
-                    background-color: white;
+                        width: 95%;
+                        margin-right: -5px;
+                        margin-left: 5px;
+                        border: none;
+                        border-radius: 3px;
+                        font-size: 25px;
+                        background-color: white;
                     }
                     img{
                         left: -3px;
@@ -186,26 +201,24 @@
                     }   
                 }          
             }
+            .bot_header_dropdown_wrapper{
+                
+                .bot_header_dropdown{
+                    position: absolute;
+                }
+            }
         }
     }
-
-
 }
 
 
 
 
-//Màn hình điện thoại siêu bé
-// @media (max-width: 320px){
-//     .top_header_left button{
-//         font-size: 9px;
-//     }
-    
-// }
+
 
 @media (max-width: 450px){
     
-}
+} 
 
 //Màn hình điện thoại
 @media (min-width: 321px) and (max-width: 739px){
