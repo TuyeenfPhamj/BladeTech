@@ -34,4 +34,25 @@ export function setupAccountDropdown() {
   account_dropdown.addEventListener('click', (e) => {
     e.stopPropagation();
   });
+};
+
+
+export function setupDropDownBottomHeader() {
+  const bot_header_dropdown_wrapper = document.getElementById('bot_header_dropdown_wrapper');
+  const bot_header_dropdown = document.getElementById('bot_header_dropdown');
+
+  if (!bot_header_dropdown_wrapper || !bot_header_dropdown) return;
+
+  document.addEventListener('click', (e) => {
+    if (bot_header_dropdown_wrapper.contains(e.target)) {
+      bot_header_dropdown_wrapper.classList.toggle('show');
+    } else {
+      bot_header_dropdown_wrapper.classList.remove('show');
+    }
+  });
+
+  // Ngăn dropdown bị ẩn khi click vào chính nó
+  bot_header_dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 }
