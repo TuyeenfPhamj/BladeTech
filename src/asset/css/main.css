@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,21 +12,6 @@ body {
   color: #333;
 }
 
-/* Grid system 12 column */
-/* Cách hoạt động là grid chứa row, row chứa các column, column chứa thành phần khác (có thể là row)*/
-/* 'tiền tố' là các biến thể của cột, được áp dụng cho từng loại thiết bị*/
-/* row = lớp dòng */
-/* col = lớp cột chính */
-/* c-'x' = tiền tố cho mobile */
-/* m-'x' = tiền tố cho tablet  */
-/* l-'x' = tiền tố cho PC */
-/* Cách chia bố cục */
-/* Cách 1: biết rõ thành phần chiếm bao nhiêu trên tổng số 12 columns thì chọn 'loại tiền tố' - 'số lượng chiếm'  */
-/* Cách 2: Ko biết rõ thành phần chiếm bao nhiêu trên tổng số cột, lấy 12 chia số lượng thành phần muốn hiển thị trên 1 hàng = X rồi chọn 'tiền tố' - x */
-/* Cách 3: c/l/c-x với x là */
-/* Cách chia offset */
-/* Nếu muốn 1 thành phần ra giữa, ta tìm số x của tiền tố của nó, sau đó theo công thức x + y + y = 12 trong đó y và z là khoảng cách 2 bên mà muốn căn đều, và thực hiện thêm lớp 'tiền tố' - o -x */
-/* Nếu muốn đẩy các thành phần đi, ta tìm số tổng x của tiền tố của các thành phần, sau đó theo công thức tongX + y <= 12, trong đó y là khoảng muốn đẩy các thành phần đi và thực hiện thêm lớp 'tiền tố' - o -x */
 * {
   box-sizing: border-box;
 }
@@ -283,7 +267,7 @@ body {
   }
 }
 /* PC medium resolution > */
-@media (min-width: 1113px) {
+@media (min-width: 1024px) {
   .row {
     margin-left: -12px;
     margin-right: -12px;
@@ -405,136 +389,6 @@ body {
   }
 }
 /* Tablet - PC low resolution */
-@media (min-width: 740px) and (max-width: 1023px) {
-  .wide {
-    width: 644px;
-  }
-}
-/* > PC low resolution */
-@media (min-width: 1024px) and (max-width: 1239px) {
-  .wide {
-    width: 984px;
-  }
-  .wide .row {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-  .wide .row.sm-gutter {
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-  .wide .col {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .wide .row.sm-gutter .col {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .wide .l-0 {
-    display: none;
-  }
-  .wide .l-1,
-  .wide .l-2,
-  .wide .l-2-4,
-  .wide .l-3,
-  .wide .l-4,
-  .wide .l-5,
-  .wide .l-6,
-  .wide .l-7,
-  .wide .l-8,
-  .wide .l-9,
-  .wide .l-10,
-  .wide .l-11,
-  .wide .l-12 {
-    display: block;
-  }
-  .wide .l-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%;
-  }
-  .wide .l-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%;
-  }
-  .wide .l-2-4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-  .wide .l-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .wide .l-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-  .wide .l-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
-  }
-  .wide .l-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .wide .l-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%;
-  }
-  .wide .l-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%;
-  }
-  .wide .l-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
-  .wide .l-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-  }
-  .wide .l-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-  }
-  .wide .l-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .wide .l-o-1 {
-    margin-left: 8.33333%;
-  }
-  .wide .l-o-2 {
-    margin-left: 16.66667%;
-  }
-  .wide .l-o-3 {
-    margin-left: 25%;
-  }
-  .wide .l-o-4 {
-    margin-left: 33.33333%;
-  }
-  .wide .l-o-5 {
-    margin-left: 41.66667%;
-  }
-  .wide .l-o-6 {
-    margin-left: 50%;
-  }
-  .wide .l-o-7 {
-    margin-left: 58.33333%;
-  }
-  .wide .l-o-8 {
-    margin-left: 66.66667%;
-  }
-  .wide .l-o-9 {
-    margin-left: 75%;
-  }
-  .wide .l-o-10 {
-    margin-left: 83.33333%;
-  }
-  .wide .l-o-11 {
-    margin-left: 91.66667%;
-  }
-}
 .header_container {
   width: 100%;
   height: 39px;
@@ -563,12 +417,16 @@ body {
   position: relative;
   margin: 5px 0px;
 }
+@media (min-width: 740px) {
+  .header_container .top_header_container .top_header_left button {
+    font-weight: bold;
+  }
+}
 .header_container .top_header_container .top_header_middle {
   position: relative;
   display: flex;
   justify-content: flex-end;
   top: 5px;
-  font-size: 16px;
 }
 .header_container .top_header_container .top_header_middle img {
   width: 27px;
@@ -586,6 +444,12 @@ body {
     margin-top: 5px;
   }
 }
+@media (min-width: 1200px) {
+  .header_container .top_header_container .top_header_middle {
+    position: relative;
+    top: 0px;
+  }
+}
 .header_container .top_header_container .top_header_middle .account_dropdown {
   display: none;
   position: absolute;
@@ -601,7 +465,18 @@ body {
   .header_container .top_header_container .top_header_middle .account_dropdown {
     max-width: 500px;
     right: 0%;
-    top: 110%;
+  }
+}
+@media (min-width: 1024px) {
+  .header_container .top_header_container .top_header_middle .account_dropdown {
+    max-width: 500px;
+    right: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .header_container .top_header_container .top_header_middle .account_dropdown {
+    max-width: 500px;
+    left: 40%;
   }
 }
 .header_container .top_header_container .top_header_middle .account_dropdown h3 {
@@ -673,18 +548,28 @@ body {
   height: 35px;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .header_container .bottom_header_container {
+    height: 120px;
+  }
+}
+@media (min-width: 1450px) {
+  .header_container .bottom_header_container #bottom-header-wide {
+    max-width: 1450px !important;
+  }
+}
 .header_container .bottom_header_container .bottom_header img {
   width: 100%;
-  max-width: 30px;
-  min-width: 25px;
+  max-width: 23px;
+  min-width: 23px;
   position: relative;
-  top: 2px;
+  top: 6px;
   left: 7%;
 }
 .header_container .bottom_header_container .bottom_header .logo_container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  top: -3px;
 }
 .header_container .bottom_header_container .bottom_header .logo_container a {
   height: 35px;
@@ -713,6 +598,7 @@ body {
   background-color: white;
 }
 .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control img {
+  top: 0px;
   left: -3px;
   max-width: 23px;
 }
@@ -722,6 +608,19 @@ body {
   border: none;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+}
+.header_container .bottom_header_container .bottom_header #bot_header_dropdown_wrapper img {
+  width: 100%;
+  max-width: 20px;
+  min-width: 20px;
+  position: relative;
+}
+@media (min-width: 740px) {
+  .header_container .bottom_header_container .bottom_header #bot_header_dropdown_wrapper img {
+    max-width: 23px;
+    min-width: 23px;
+    margin-left: 5%;
+  }
 }
 .header_container .bottom_header_container .bottom_header #bot_header_dropdown_wrapper #bot_header_dropdown {
   position: absolute;

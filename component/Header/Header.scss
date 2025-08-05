@@ -26,6 +26,12 @@
                 position: relative;
                 margin: 5px 0px;
             }
+            @media (min-width: 740px){
+                button{
+                    font-weight: bold;
+                }
+            }
+
         }
         .top_header_middle{
             position: relative;
@@ -49,7 +55,12 @@
                 position: static;
                 margin-top: 5px;
             }
-            font-size: 16px;
+            
+            @media (min-width: 1200px){
+                position: relative;
+                top: 0px;
+            }
+            
             .account_dropdown{
                 display: none;
                 position: absolute;
@@ -64,7 +75,16 @@
                 @media (min-width: 740px){
                     max-width: 500px;
                     right: 0%;
-                    top: 110%;
+                }
+
+                @media (min-width: 1024px){
+                    max-width: 500px;
+                    right: 5%;
+                }
+
+                @media (min-width: 1200px){
+                    max-width: 500px;
+                    left: 40%;
                 }
 
                 h3{
@@ -151,20 +171,31 @@
         height: 35px;
         position: relative;
 
+        @media (min-width: 1024px){
+            height: 120px;
+        }
+
+
+        @media (min-width: 1450px){
+            #bottom-header-wide{
+                max-width: 1450px !important;
+            } 
+        }
+        
         .bottom_header{
             img{
                 width: 100%;
-                max-width: 30px;
-                min-width: 25px;
+                max-width: 23px;
+                min-width: 23px;
                 position: relative;
-                top: 2px;
+                top: 6px;
                 left: 7%;
             }
             
             .logo_container{
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                position: relative;
+                top: -3px;
                 a{
                     height: 35px;
                 }
@@ -192,6 +223,7 @@
                         background-color: white;
                     }
                     img{
+                        top:0px;
                         left: -3px;
                         max-width: 23px;
                     }
@@ -205,6 +237,19 @@
                 }          
             }
             #bot_header_dropdown_wrapper{
+                img{
+                    width: 100%;
+                    max-width: 20px;
+                    min-width: 20px;
+                    position: relative;
+                    @media (min-width: 740px){
+                        max-width: 23px;
+                        min-width: 23px;
+                        margin-left: 5%;
+                    }
+
+                }
+
                 #bot_header_dropdown{
                     position: absolute;
                     top: 100%;
