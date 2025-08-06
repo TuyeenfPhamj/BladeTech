@@ -2,7 +2,7 @@
 
 
 //dropdown của account trên tablet và mobile
-export function setupAccountDropdown() {
+function setupAccountDropdown() {
   const account_wrapper = document.getElementById('account_wrapper');
   const account_dropdown = document.getElementById('account_dropdown');
 
@@ -25,7 +25,7 @@ export function setupAccountDropdown() {
 
 
 // dropdown của các lựa chọn header khi màn hình tablet hoặc mobile
-export function setupDropDownBottomHeader() {
+function setupDropDownBottomHeader() {
   const bot_header_dropdown_wrapper = document.getElementById('bot_header_dropdown_wrapper');
   const bot_header_dropdown = document.getElementById('bot_header_dropdown');
 
@@ -49,7 +49,7 @@ export function setupDropDownBottomHeader() {
 
 
 // đổi logo khi màn to
-export function changeLOGO() {
+function changeLOGO() {
   if (window.matchMedia("(min-width: 1024px)").matches) {
     document.getElementById("logo").src = "../../src/photo/logo/big-logo.png";
 
@@ -58,3 +58,11 @@ export function changeLOGO() {
   }
 }
 console.log("changeLOGO called")
+
+
+export default function setupHeader() {
+  console.log("Đang setup header...");
+  setupAccountDropdown();
+  setupDropDownBottomHeader();
+  changeLOGO();
+}

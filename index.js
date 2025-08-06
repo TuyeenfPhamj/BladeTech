@@ -1,5 +1,2 @@
-fetch("./component/Header/Header.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data
-    });
+import { loadComponent } from './src/asset/js/main.js';
+loadComponent('header-placeholder', './Component/Header/Header.html','/Component/Header/Header.js');
