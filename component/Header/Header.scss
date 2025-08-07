@@ -15,10 +15,11 @@
                 text-decoration: none;
                 background-color: white;
                 border-radius: 15px;
-                padding: 3px 12px;
+                padding: 3px 10px;
                 color: $primary-color;
                 position: relative;
                 top: 5px;
+                font-weight: bold;
             }
             a:hover{
                 color: $primary-color-hover;
@@ -103,6 +104,9 @@
                     max-width: 500px;
                     left: 40%;
                 }
+                @media (min-width: 1450px){
+                    left: 55%;
+                }
 
                 h3{
                     text-align: center;
@@ -135,6 +139,7 @@
                         background-color: $primary-color;
                         border-radius: 10px;
                         color: white;
+                        cursor: pointer;
                     }
                     
                 }
@@ -199,7 +204,7 @@
         position: relative;
 
         @media (min-width: 1024px){
-            height: 120px;
+            height: 100px;
         }
 
         
@@ -218,7 +223,8 @@
                 position: relative;
                 top: -3px;
                 a{
-                    height: 35px;
+                    min-height: fit-content;
+                    max-height: fit-content;
                 }
                 img{
                     min-width: 20px;
@@ -226,14 +232,24 @@
                 }
 
                 @media (min-width: 1024px) {
+                    top:15px;
                     img{
-                        min-width: 150px;
-                        max-width: 150px;
-                        border: 2px solid black;
+                        
+                        border: 3px solid black;
+                        max-width: 155px;
+                        min-width: 155px;
+                        padding: 5px 10px;
+                        background-color: white;
                     }
                     a{
-                        padding: 10px 10px;
+
+                        max-width: fit-content;
+                        min-width: fit-content;
+                        max-height: fit-content;
                     }
+                }
+                @media (min-width: 1450px){
+                    left: 20px;
                 }
             }
             .search_bar_container{
@@ -243,15 +259,29 @@
                     width: 100%;
                     display: flex;
                     align-items: center;
+                    @media (min-width: 1024px){
+                        position: relative;
+                        top: 35px;
+                        
+                    }
 
                     input[type="text"]{
-                        width: 95%;
+                        width: 90%;
+                        padding: 0px 5px;
                         margin-right: -5px;
                         margin-left: 5px;
                         border: none;
+                        height: 29px;
                         border-radius: 3px;
-                        font-size: 25px;
+                        font-size: 18px;
                         background-color: white;
+                        @media (min-width: 1024px){
+                            font-size: 18px;
+                            height: 40px;
+                        }
+                    }
+                    input[type="text"]:focus{
+                        outline: none;
                     }
                     img{
                         top:0px;
@@ -264,6 +294,10 @@
                         border: none;
                         border-bottom-right-radius: 5px;
                         border-top-right-radius: 5px;
+                        @media (min-width: 1024px){
+                            height: 40px;
+                        }
+                        cursor: pointer;
                     }   
                 }          
             }
@@ -307,10 +341,65 @@
                     }
                 }
                 
+                
             }
             #bot_header_dropdown_wrapper.show #bot_header_dropdown {
-                    display: block;
+                display: block;
+            }
+
+            .option_header{
+                a{
+                    display: inline-flex;
+                    margin-top: 20px;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
                 }
+                a:hover{
+                    color: $primary-color;
+                }
+                img{
+                    min-width: 60px; 
+                }
+                p{
+                    margin-left: 20px;
+                    margin-top: 10px
+                };
+
+                
+            }
+            .checkorder_container p:nth-child(2){
+                margin-left: 10px;
+            }
+            .cart_container{
+                @media (max-width: 1023px){
+                    a,img{
+                        min-width: 23px;
+                        max-width: 23px;
+                        position: relative;
+                        bottom: 20px;
+                    }
+                    p{
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        
+        @media (min-width: 1450px){
+            .logo_container{
+                flex: 0 0 13.66667%;
+                max-width: 13.66667%;
+            }
+            .search_bar_container{
+                flex: 0 0 29%;
+                max-width: 29%;
+            }
+            .option_header{
+                flex: 0 0 13%;
+                max-width: 13%;
+            }
         }
     }
 }

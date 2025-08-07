@@ -8,7 +8,7 @@ function setupAccountDropdown() {
 
   if (!account_wrapper || !account_dropdown) return;
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener('mousedown', (e) => {
     if (account_wrapper.contains(e.target)) {
       account_wrapper.classList.toggle('show');
     } else {
@@ -17,7 +17,7 @@ function setupAccountDropdown() {
   });
 
   // Ngăn dropdown bị ẩn khi click vào chính nó
-  account_dropdown.addEventListener('click', (e) => {
+  account_dropdown.addEventListener('mousedown', (e) => {
     e.stopPropagation();
   });
 };
@@ -31,7 +31,7 @@ function setupDropDownBottomHeader() {
 
   if (!bot_header_dropdown_wrapper || !bot_header_dropdown) return;
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener('mousedown', (e) => {
     if (bot_header_dropdown_wrapper.contains(e.target)) {
       bot_header_dropdown_wrapper.classList.toggle('show');
     } else {
@@ -40,7 +40,7 @@ function setupDropDownBottomHeader() {
   });
 
   // Ngăn dropdown bị ẩn khi click vào chính nó
-  bot_header_dropdown.addEventListener('click', (e) => {
+  bot_header_dropdown.addEventListener('mousedown', (e) => {
     e.stopPropagation();
   });
 }
@@ -50,19 +50,38 @@ function setupDropDownBottomHeader() {
 
 // đổi logo khi màn to
 function changeLOGO() {
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    document.getElementById("logo").src = "../../src/photo/logo/big-logo.png";
+  const logo = document.getElementById("logo");
+  if (!logo) return;
 
+  if (window.innerWidth >= 1024) {
+    logo.src = "../../src/photo/logo/big-logo.png";
   } else {
-    document.getElementById("logo").src = "../../src/photo/logo/logo.png";
+    logo.src = "../../src/photo/logo/logo.png";
   }
 }
-console.log("changeLOGO called")
+
+function toggleGutterOnXL(){
+  const target = document.getElementById("bottom_header");
+  if(window.innerWidth >= 1450){
+    target.classList.remove("no-gutters");
+  }
+  else{
+    target.classList.add("no-gutters");
+  }
+}
 
 
 export default function setupHeader() {
   console.log("Đang setup header...");
-  setupAccountDropdown();
-  setupDropDownBottomHeader();
-  changeLOGO();
+  //requestAnimationFrame() là API của trình duyệt dùng để trì hoãn việc thực hiện một đoạn mã JavaScript cho đến khi trình duyệt chuẩn bị vẽ khung tiếp theo
+  //Khi sử dụng tức, là muốn chạy hàm này khi chuẩn bị vẽ frame kế tiếp (lúc này DOM đã chạy xong) 
+  requestAnimationFrame(() => {
+    setupAccountDropdown();
+    setupDropDownBottomHeader();
+    changeLOGO();
+    toggleGutterOnXL();
+    window.addEventListener("resize", changeLOGO);
+    window.addEventListener("resize", toggleGutterOnXL);
+  })
+  
 }

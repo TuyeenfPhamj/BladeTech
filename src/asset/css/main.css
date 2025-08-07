@@ -535,10 +535,11 @@ body {
   text-decoration: none;
   background-color: white;
   border-radius: 15px;
-  padding: 3px 12px;
+  padding: 3px 10px;
   color: #4B8CFF;
   position: relative;
   top: 5px;
+  font-weight: bold;
 }
 .header_container .top_header_container .advice a:hover {
   color: rgb(80, 128, 212);
@@ -622,6 +623,11 @@ body {
     left: 40%;
   }
 }
+@media (min-width: 1450px) {
+  .header_container .top_header_container .top_header_middle .account_dropdown {
+    left: 55%;
+  }
+}
 .header_container .top_header_container .top_header_middle .account_dropdown h3 {
   text-align: center;
   font-size: 30px;
@@ -653,6 +659,7 @@ body {
   background-color: #4B8CFF;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
 }
 .header_container .top_header_container .top_header_middle .account_dropdown .control {
   text-align: center;
@@ -702,7 +709,7 @@ body {
 }
 @media (min-width: 1024px) {
   .header_container .bottom_header_container {
-    height: 120px;
+    height: 100px;
   }
 }
 .header_container .bottom_header_container .bottom_header img {
@@ -719,20 +726,33 @@ body {
   top: -3px;
 }
 .header_container .bottom_header_container .bottom_header .logo_container a {
-  height: 35px;
+  min-height: fit-content;
+  max-height: fit-content;
 }
 .header_container .bottom_header_container .bottom_header .logo_container img {
   min-width: 20px;
   max-width: 45px;
 }
 @media (min-width: 1024px) {
+  .header_container .bottom_header_container .bottom_header .logo_container {
+    top: 15px;
+  }
   .header_container .bottom_header_container .bottom_header .logo_container img {
-    min-width: 150px;
-    max-width: 150px;
-    border: 2px solid black;
+    border: 3px solid black;
+    max-width: 155px;
+    min-width: 155px;
+    padding: 5px 10px;
+    background-color: white;
   }
   .header_container .bottom_header_container .bottom_header .logo_container a {
-    padding: 10px 10px;
+    max-width: fit-content;
+    min-width: fit-content;
+    max-height: fit-content;
+  }
+}
+@media (min-width: 1450px) {
+  .header_container .bottom_header_container .bottom_header .logo_container {
+    left: 20px;
   }
 }
 .header_container .bottom_header_container .bottom_header .search_bar_container {
@@ -744,14 +764,31 @@ body {
   display: flex;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control {
+    position: relative;
+    top: 35px;
+  }
+}
 .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control input[type=text] {
-  width: 95%;
+  width: 90%;
+  padding: 0px 5px;
   margin-right: -5px;
   margin-left: 5px;
   border: none;
+  height: 29px;
   border-radius: 3px;
-  font-size: 25px;
+  font-size: 18px;
   background-color: white;
+}
+@media (min-width: 1024px) {
+  .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control input[type=text] {
+    font-size: 18px;
+    height: 40px;
+  }
+}
+.header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control input[type=text]:focus {
+  outline: none;
 }
 .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control img {
   top: 0px;
@@ -764,6 +801,12 @@ body {
   border: none;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .header_container .bottom_header_container .bottom_header .search_bar_container .search_bar_control button {
+    height: 40px;
+  }
 }
 .header_container .bottom_header_container .bottom_header #bot_header_dropdown_wrapper img {
   width: 100%;
@@ -804,6 +847,51 @@ body {
 }
 .header_container .bottom_header_container .bottom_header #bot_header_dropdown_wrapper.show #bot_header_dropdown {
   display: block;
+}
+.header_container .bottom_header_container .bottom_header .option_header a {
+  display: inline-flex;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.header_container .bottom_header_container .bottom_header .option_header a:hover {
+  color: #4B8CFF;
+}
+.header_container .bottom_header_container .bottom_header .option_header img {
+  min-width: 60px;
+}
+.header_container .bottom_header_container .bottom_header .option_header p {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.header_container .bottom_header_container .bottom_header .checkorder_container p:nth-child(2) {
+  margin-left: 10px;
+}
+@media (max-width: 1023px) {
+  .header_container .bottom_header_container .bottom_header .cart_container a, .header_container .bottom_header_container .bottom_header .cart_container img {
+    min-width: 23px;
+    max-width: 23px;
+    position: relative;
+    bottom: 20px;
+  }
+  .header_container .bottom_header_container .bottom_header .cart_container p {
+    display: none;
+  }
+}
+@media (min-width: 1450px) {
+  .header_container .bottom_header_container .logo_container {
+    flex: 0 0 13.66667%;
+    max-width: 13.66667%;
+  }
+  .header_container .bottom_header_container .search_bar_container {
+    flex: 0 0 29%;
+    max-width: 29%;
+  }
+  .header_container .bottom_header_container .option_header {
+    flex: 0 0 13%;
+    max-width: 13%;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 739px) {
