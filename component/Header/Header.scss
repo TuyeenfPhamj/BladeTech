@@ -2,7 +2,7 @@
 
 .header_container{
     width: 100%;
-    height: 39px;
+    height: fit-content;
     .top_header_container{
         background-color: $primary-color;
         width: 100%;
@@ -126,9 +126,11 @@
                 
                 input[type="text"],input[type="password"]{
                     width: 70%;
-                    font-size: 20px;
+                    font-size: 15px;
                     margin-bottom: 10px;
                     margin-right: 10px;
+                    padding-left: 5px;
+                    height: 30px;
                 }
                 .button_container{
                     margin-top: 5px;
@@ -201,7 +203,7 @@
         background-color: $secondary-color;
         width: 100vw;
         height: 35px;
-        position: relative;
+
 
         @media (min-width: 1024px){
             height: 100px;
@@ -294,14 +296,16 @@
                         border: none;
                         border-bottom-right-radius: 5px;
                         border-top-right-radius: 5px;
+                        cursor: pointer;
                         @media (min-width: 1024px){
                             height: 40px;
                         }
-                        cursor: pointer;
                     }   
                 }          
             }
             #bot_header_dropdown_wrapper{
+                position: relative;
+
                 img{
                     width: 100%;
                     max-width: 20px;
@@ -322,7 +326,7 @@
                     border: 1px solid #ccc;
                     z-index: 99;
                     width: 96vw;
-                    right: 2%;
+                    right: -70%;
                     display: none;
 
                     a{
