@@ -958,6 +958,11 @@ body {
 .footer_container .social_media_link img {
   margin-top: 10px;
 }
+.footer_container .social_media_link a {
+  display: inline;
+  padding: 0px;
+  margin: 0 10px;
+}
 .footer_container .footer_items.active .footer_dropdown {
   max-height: 200px;
 }
