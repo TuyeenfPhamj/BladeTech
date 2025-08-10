@@ -1,0 +1,33 @@
+@use '../../src/asset/css/abstracts/variables' as *;
+
+.category{
+    max-width: 80%;    
+    background-color: aqua;
+
+    @media (min-width: 1024px){
+
+       max-width: 261px; 
+    }
+    .menu_contain{
+        
+
+        .menu{
+
+            li{
+                
+                padding: 10px 12px;
+                list-style: none;
+                a{
+                    max-width: 100%;
+                    text-decoration: none;
+                    @media (min-width: 1024px){
+                        max-width: 261px; 
+                    }
+                    img{
+                        max-width: 36px;
+                    }
+                }
+            }
+        }
+    }
+}

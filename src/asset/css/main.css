@@ -992,4 +992,30 @@ body {
   text-align: center;
 }
 
+.category {
+  max-width: 80%;
+  background-color: aqua;
+}
+@media (min-width: 1024px) {
+  .category {
+    max-width: 261px;
+  }
+}
+.category .menu_contain .menu li {
+  padding: 10px 12px;
+  list-style: none;
+}
+.category .menu_contain .menu li a {
+  max-width: 100%;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .category .menu_contain .menu li a {
+    max-width: 261px;
+  }
+}
+.category .menu_contain .menu li a img {
+  max-width: 36px;
+}
+
 /*# sourceMappingURL=main.css.map */
