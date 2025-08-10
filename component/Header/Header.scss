@@ -42,6 +42,10 @@
                 background-color: white;
                 position: relative;
                 margin: 5px 0px;
+
+                @media (min-width: 321px) and (max-width: 739px){
+                    font-size: 11px;
+                }
             }
             @media (min-width: 740px){
                 button{
@@ -406,21 +410,30 @@
             }
         }
     }
-}
+    .sub_header{
+        .row{
+            margin-top: 5px;
+            .sub_header_option{
+                a{
+                    display: inline-flex;
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    color: $primary-color;
+                }
+                p{
+                    margin-left: 5px;
+                }
+                img{
+                    // display: none;
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 5px;
+                }
 
-
-
-
-
-
-@media (max-width: 450px){
-    
-} 
-
-//Màn hình điện thoại
-@media (min-width: 321px) and (max-width: 739px){
-    .top_header_left button{
-        font-size: 11px;
+            }
+        }
     }
 }
-
+ 
