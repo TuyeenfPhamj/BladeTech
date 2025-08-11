@@ -1,6 +1,5 @@
 
 
-
 //dropdown của account trên tablet và mobile
 function setupAccountDropdown() {
   const account_wrapper = document.getElementById('account_wrapper');
